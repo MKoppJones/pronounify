@@ -1,0 +1,47 @@
+{
+    "manifest_version": 2,
+    "name": "pronounify",
+    "description": "description",
+    "version": "0.0.1",
+    "permissions": [
+        "<all_urls>",
+        "find"
+    ],
+    "icons": {
+        "64": "icons/icon.png"
+    },
+    "background": {
+        "scripts": [
+            "browser-polyfill.js",
+            "background_script.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.twitter.com/*"
+            ],
+            "js": [
+                "browser-polyfill.js",
+                "content_script.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "64": "icons/icon.png"
+        },
+        "default_popup": "browserAction/index.html",
+        "default_title": "pronounify"
+    },
+    "page_action": {
+        "default_icon": {
+            "64": "icons/icon.png"
+        },
+        "default_popup": "pageAction/index.html",
+        "default_title": "pronounify"
+    },
+    "options_ui": {
+        "page": "options/index.html"
+    }
+}
