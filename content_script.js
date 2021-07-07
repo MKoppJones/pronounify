@@ -16,7 +16,6 @@ function getPronouns(user) {
   console.log(user);
   const pronouns = {
     '@MikeyKoppJ': {
-      color: 'purple',
       flag: 'lgbt',
       text: 'he/him',
     },
